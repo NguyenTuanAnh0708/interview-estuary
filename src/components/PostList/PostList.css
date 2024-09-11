@@ -1,0 +1,56 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.post-content {
+  margin: 10px 0;
+  color: #666;
+}
+
+.post-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.post-delete,
+.post-update {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.post-delete {
+  background-color: #e53e3e;
+  color: #fff;
+}
+
+.post-update {
+  background-color: #38a169;
+  color: #fff;
+}
+
+.post-delete:hover {
+  background-color: #c53030;
+}
+
+.post-update:hover {
+  background-color: #2f855a;
+}

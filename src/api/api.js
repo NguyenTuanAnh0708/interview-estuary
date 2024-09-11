@@ -1,12 +1,11 @@
-const getRandomDelay = () => Math.floor(Math.random() * (500 - 200 + 1)) + 200;
+const RandomDelay = 200
 
-// Helper to get and save data
 const getData = (key) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             const data = JSON.parse(localStorage.getItem(key)) || [];
             resolve(data);
-        }, getRandomDelay());
+        }, RandomDelay);
     });
 };
 
@@ -15,7 +14,7 @@ const saveData = (key, data) => {
         setTimeout(() => {
             localStorage.setItem(key, JSON.stringify(data));
             resolve();
-        }, getRandomDelay());
+        }, RandomDelay);
     });
 };
 
@@ -36,6 +35,7 @@ const deletePost = async (id) => {
     const posts = await getPosts();
     const updatedPosts = posts.filter(post => post.id !== id);
     await savePosts(updatedPosts);
+    localStorage.removeItem(`comments_${id}`);
 };
 
 

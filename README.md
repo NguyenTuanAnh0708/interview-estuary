@@ -1,8 +1,29 @@
-# React + Vite
+miêu tả :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+App Component
+State: Posts , loading
+Props: Không có
 
-Currently, two official plugins are available:
+PostForm (Form để tạo bài post )
+State:title ,content
+Props: onAddPost
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+PostList Component:
+State: posts (Danh sách bài viết)
+Props: posts (Danh sách bài viết), onPostUpdate, onPostDelete
+
+Post Component: do component đơn giản nên không tách ra
+
+EditPostForm Component:
+State:title , content
+Props: title , content (giá trị khởi tạo cho state) ,onUpdate, onCancel
+
+CommentList Component:
+State: comments , editingComment
+Props: postId ( nhận id post để lấy dữ liệu commnet từng bài post)
+
+Comment-Item:do component đơn giản nên không tách ra
+
+Comment Form: (Vừa edit vừa tạo comment)
+State: commentText
+Props: onSaveComment,onUpdateComment,editingComment,setEditingComment,
